@@ -23,8 +23,10 @@ public class Company extends TaxPayer {
 
 	@Override
 	public double tax() {
-		// TODO Auto-generated method stub
-		return 0;
+
+		double tax = (numberOfEmployees > 10) ? getAnualIncome() * 0.14 : getAnualIncome() * 0.16;
+		
+		return tax;
 	}
 
 }
